@@ -9,8 +9,8 @@
   --mobile: 426px;
   --tablet: 769px;
 
-  --fs-extra-large: 4rem;
-  --fs-xl: 2.75rem;
+  --fs-extra-large: 3rem;
+  --fs-xl: 2.25rem;
   --fs-lg: 1.75rem;
   --fs-md: 1.125rem;
   --fs-base: 0.8125rem;
@@ -21,8 +21,8 @@
 
 @media (min-width: 426px) {
   :root {
-    --fs-extra-large: 4.5rem;
-    --fs-xl: 3rem;
+    --fs-extra-large: 4rem;
+    --fs-xl: 2.5rem;
     --fs-lg: 1.75rem;
     --fs-md: 1.25rem;
     --fs-base: 1rem;
@@ -32,6 +32,16 @@
   }
 }
 @media (min-width: 769px) {
+  :root {
+    --fs-extra-large: 4.5rem;
+    --fs-xl: 3.25rem;
+    --fs-lg: 1.75rem;
+    --fs-md: 1.3125rem;
+    --fs-base: 1.125rem;
+    --fs-sm: 0.8125rem;
+  }
+}
+@media (min-width: 1025px) {
   :root {
     --fs-extra-large: 5.5rem;
     --fs-xl: 3.25rem;
