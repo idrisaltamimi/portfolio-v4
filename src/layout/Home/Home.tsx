@@ -1,5 +1,5 @@
 import { Section } from "../../components"
-import hero from "../../assets/hero.jpg"
+import hero from "../../assets/hero.svg"
 import { VscArrowRight } from "react-icons/vsc"
 import "./Home.scss"
 
@@ -8,10 +8,8 @@ export default function Home() {
     <>
       <Section className="home">
         <div className="home--desc">
-          <h1>
-            Hi I'm Idris,{" "}
-            <span className="home--title colorful">Frontend Developer,</span>
-          </h1>
+          <span className="home--overline">Hi I'm Idris,</span>
+          <h1 className="home--title colorful">Frontend Developer,</h1>
           <h2>
             Bringing digital experiences to life,
             <br /> one line of code at a time
@@ -27,7 +25,7 @@ export default function Home() {
         </div>
 
         <div className="hero--img-wrapper">
-          <img src={hero} width={700} height={700} alt="" />
+          <img src={hero} width={800} height={800} alt="" />
         </div>
       </Section>
       <div className="home--overlay-text">
