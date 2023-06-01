@@ -1,0 +1,80 @@
+:root {
+  --color-1: #4831d4;
+  --color-2: #4831d4;
+  --color-3: #4831d4;
+  --scroll: #4831d4;
+  --_time1: 5s;
+  --_time2: 10s;
+}
+
+@property --color-1 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #4831d4;
+}
+
+@property --color-2 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #4831d4;
+}
+
+@property --color-3 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #4831d4;
+}
+
+.colorful {
+  background: linear-gradient(to right, var(--color-1), var(--color-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-clip: text;
+}
+
+@supports (--color-1: #116c93) {
+  .colorful {
+    animation: h1-span1 var(--_time1) infinite alternate,
+      h1-span2 var(--_time1) infinite var(--_time1) alternate,
+      h1-span3 var(--_time1) infinite var(--_time2) alternate;
+    -webkit-animation: h1-span1 var(--_time1) infinite alternate,
+      h1-span2 var(--_time1) infinite var(--_time1) alternate,
+      h1-span3 var(--_time1) infinite var(--_time2) alternate;
+  }
+}
+
+@keyframes h1-span1 {
+  to {
+    --color-1: #116c93;
+  }
+}
+
+@keyframes h1-span2 {
+  to {
+    --color-2: #116c93;
+  }
+}
+
+@keyframes h1-span3 {
+  to {
+    --color-3: #116c93;
+  }
+}
+@-webkit-keyframes h1-span1 {
+  to {
+    --color-1: #116c93;
+  }
+}
+
+@-webkit-keyframes h1-span2 {
+  to {
+    --color-2: #116c93;
+  }
+}
+
+@-webkit-keyframes h1-span3 {
+  to {
+    --color-3: #116c93;
+  }
+}

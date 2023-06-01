@@ -1,0 +1,7 @@
+.section {
+  max-width: calc(1440px + (var(--section-padding) * 2));
+  margin-inline: auto;
+  min-height: 100vh;
+
+  padding-inline: var(--section-padding);
+}
