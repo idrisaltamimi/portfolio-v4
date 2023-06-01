@@ -9,7 +9,7 @@ export default function Home() {
       <Section className="home">
         <div className="home--desc">
           <h1>
-            <span>Hi I'm Idris,</span>{" "}
+            Hi I'm Idris,{" "}
             <span className="home--title colorful">Frontend Developer,</span>
           </h1>
           <h2>

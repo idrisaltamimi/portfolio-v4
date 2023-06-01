@@ -7,16 +7,16 @@
   justify-content: space-between;
 
   h1 {
+    span {
+      display: block;
+      font-size: var(--fs-lg);
+      font-weight: 400;
+    }
     .home--title {
       font-size: var(--fs-extra-large);
       line-height: 1;
       font-weight: 700;
       padding-bottom: 1rem;
-    }
-    span {
-      display: block;
-      font-size: var(--fs-lg);
-      font-weight: 400;
     }
   }
 
