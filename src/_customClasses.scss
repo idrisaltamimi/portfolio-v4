@@ -25,11 +25,16 @@
   initial-value: #4831d4;
 }
 
+@property --scroll {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #4831d4;
+}
+
 .colorful {
   background: linear-gradient(to right, var(--color-1), var(--color-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
   background-clip: text;
 }
 
@@ -77,4 +82,68 @@
   to {
     --color-3: #116c93;
   }
+}
+
+// scroll button animation //
+.scroll-btn {
+  position: relative;
+  z-index: 2;
+
+  height: 70px;
+  aspect-ratio: 1 / 2.4;
+
+  background-color: transparent;
+  border: 1px solid rgba(72, 49, 212, 0.6);
+  border-radius: 100px;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    left: 50%;
+    top: 5px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    width: 20px;
+    aspect-ratio: 1 / 1;
+    background-color: var(--scroll);
+    border-radius: 50%;
+    background-clip: content-box;
+  }
+}
+
+@supports (--scroll: #116c93) {
+  .scroll-btn::before {
+    animation: scroll 900ms ease-in infinite alternate;
+    -webkit-animation: scroll 900ms ease-in infinite alternate;
+  }
+}
+
+@keyframes scroll {
+  to {
+    -webkit-transform: translateX(-50%) translateY(35px);
+    transform: translateX(-50%) translateY(35px);
+    --scroll: #116c93;
+  }
+}
+@-webkit-keyframes scroll {
+  to {
+    -webkit-transform: translateX(-50%) translateY(35px);
+    transform: translateX(-50%) translateY(35px);
+    --scroll: #116c93;
+  }
+}
+
+// text overlay //
+.overlay-text {
+  position: absolute;
+  z-index: -1;
+  line-height: 1;
+  color: white;
+
+  text-shadow: 2px 2px 0 var(--accent);
 }
