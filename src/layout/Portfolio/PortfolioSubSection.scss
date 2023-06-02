@@ -1,0 +1,10 @@
+.portfolio--subsection {
+  ul {
+    padding-left: 0;
+    padding-block: 1em;
+    display: flex;
+    overflow-x: scroll;
+    list-style: none;
+    gap: 1rem;
+  }
+}
