@@ -1,19 +1,19 @@
 import { useState } from "react"
 import "./Textfield.scss"
 
-type TextfieldProps = {
+type TextareaProps = {
   label: string
   className?: string
 } & React.DetailedHTMLProps<
-  React.InputHTMLAttributes<HTMLInputElement>,
-  HTMLInputElement
+  React.TextareaHTMLAttributes<HTMLTextAreaElement>,
+  HTMLTextAreaElement
 >
 
-export default function Textfield({
+export default function Textarea({
   label,
   className = "",
   ...props
-}: TextfieldProps) {
+}: TextareaProps) {
   const [focus, setFocus] = useState(false)
   const [blur, setBlur] = useState(false)
   const handleBlur = () => setBlur(true)
@@ -27,7 +27,7 @@ export default function Textfield({
       onBlur={() => setFocus(false)}
     >
       <span className="label">{label}</span>
-      <input type="text" onBlur={handleBlur} required {...props} />
+      <textarea onBlur={handleBlur} required {...props} />
       <span className="input-bar" />
     </label>
   )
