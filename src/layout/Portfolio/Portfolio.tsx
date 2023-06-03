@@ -1,6 +1,32 @@
+import { FaNodeJs, FaReact, FaTwitter } from "react-icons/fa"
+import { TbBrandNextjs } from "react-icons/tb"
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiOpenai,
+  SiCss3,
+  SiExpress,
+  SiMongodb,
+  SiPrisma,
+  SiTrpc,
+  SiSass,
+  SiFramer
+} from "react-icons/si"
+
 import { Section } from "../../components"
 import { PortfolioSubSection, PortfolioCard } from "./"
-import { gptOmni, kanban, gptOmniIcon, kanbanIcon } from "../../assets"
+import {
+  gptOmni,
+  kanban,
+  gptOmniIcon,
+  kanbanIcon,
+  twitterIcon,
+  logoIcon,
+  openAiIcon,
+  portfolio,
+  dalle,
+  twitter
+} from "../../assets"
 import "./Portfolio.scss"
 
 export default function Portfolio() {
@@ -12,17 +38,18 @@ export default function Portfolio() {
           Here a selection of projects I've worked on.
         </span>
 
-        <PortfolioSubSection title="My Apps">
+        <PortfolioSubSection title="Personal Websites">
           <PortfolioCard
             name="GPT-OMNI"
             image={gptOmni}
             logo={gptOmniIcon}
+            center
             techStack={[
-              "React",
-              "Typescript",
-              "TailwindCSS",
-              "Nodejs",
-              "OpenAi"
+              <FaReact />,
+              <SiTypescript />,
+              <SiTailwindcss />,
+              <FaNodeJs />,
+              <SiOpenai />
             ]}
           />
           <PortfolioCard
@@ -30,17 +57,58 @@ export default function Portfolio() {
             image={kanban}
             logo={kanbanIcon}
             techStack={[
-              "React",
-              "Typescript",
-              "CSS",
-              "Nodejs",
-              "Express",
-              "MongoDB"
+              <FaReact />,
+              <SiTypescript />,
+              <SiCss3 />,
+              <FaNodeJs />,
+              <SiExpress />,
+              <SiMongodb />
+            ]}
+          />
+          <PortfolioCard
+            name="Personal Website"
+            image={portfolio}
+            logo={logoIcon}
+            smallLogo
+            center
+            techStack={[
+              <FaReact />,
+              <SiTypescript />,
+              <SiSass />,
+              <SiFramer />
             ]}
           />
         </PortfolioSubSection>
-        <h3>My Packages</h3>
-        <h3>Cloned Websites</h3>
+
+        <PortfolioSubSection title="Cloned Websites">
+          <PortfolioCard
+            name="Twitter Clone"
+            image={twitter}
+            logo={twitterIcon}
+            smallLogo
+            techStack={[
+              <TbBrandNextjs />,
+              <SiTypescript />,
+              <SiTailwindcss />,
+              <SiPrisma />,
+              <SiTrpc />
+            ]}
+          />
+          <PortfolioCard
+            name="DALL-E Clone"
+            image={dalle}
+            logo={openAiIcon}
+            smallLogo
+            techStack={[
+              <FaReact />,
+              <SiTypescript />,
+              <SiTailwindcss />,
+              <FaNodeJs />,
+              <SiExpress />,
+              <SiMongodb />
+            ]}
+          />
+        </PortfolioSubSection>
       </div>
 
       <div className="portfolio--overlay-text overlay-text">Projects</div>
