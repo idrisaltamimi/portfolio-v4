@@ -1,13 +1,11 @@
 .section {
   position: relative;
-  min-height: 100vh;
+  // min-height: 100vh;
 
   .section--wrapper {
     margin-inline: auto;
     max-width: calc(1440px + (var(--section-padding) * 2));
     padding-inline: var(--section-padding);
     padding-block: 5rem;
-    min-height: 100vh;
-    height: 100%;
   }
 }
