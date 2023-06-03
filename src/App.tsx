@@ -1,4 +1,4 @@
-import { About, Contact, Home, Portfolio } from "./layout"
+import { About, Contact, Footer, Home, Portfolio } from "./layout"
 import "./_customClasses.scss"
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
         <Portfolio />
         <About />
         <Contact />
+        <Footer />
       </main>
     </>
   )
