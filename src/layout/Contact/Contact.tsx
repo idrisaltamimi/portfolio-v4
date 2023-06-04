@@ -59,9 +59,10 @@ export default function Contact() {
           <Button className="form--send">
             <BiPaperPlane /> <span>Send Message</span>
           </Button>
-          {/* {pattern1Svg} */}
         </form>
       </div>
+
+      <div className="contact--overlay-text overlay-text">Contact</div>
     </Section>
   )
 }
@@ -95,23 +96,6 @@ const arrowSvg = (
   >
     <path
       d="M537.637 155.236C355.133 513.784 37.1697 420.607 13.1217 257.473C-9.42079 104.553 152.896 22.5182 252.015 32.7799C346.312 42.5424 350.023 140.51 264.266 140.51C159.904 140.51 101.701 63.1963 91.1791 2M537.637 155.236L405.234 198.263M537.637 155.236L580.509 288.119"
-      stroke="black"
-      strokeWidth="4"
-    />
-  </svg>
-)
-
-const pattern1Svg = (
-  <svg
-    width="626"
-    height="437"
-    viewBox="0 0 626 437"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className="contact--pattern1"
-  >
-    <path
-      d="M612.049 15L35.2539 188.849L197.31 238.36M612.049 15L197.31 238.36M612.049 15L541.567 367.438L342.307 293.493M612.049 15L305.908 279.985M197.31 238.36L234.233 415M305.908 279.985L234.233 415M305.908 279.985L342.307 293.493M234.233 415L342.307 293.493"
       stroke="black"
       strokeWidth="4"
     />
