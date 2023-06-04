@@ -1,3 +1,6 @@
+import { FaExternalLinkAlt } from "react-icons/fa"
+import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md"
+
 import logo from "../../assets/logo.svg"
 import "./Footer.scss"
 
@@ -12,19 +15,30 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#portfolio">Portfolio</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
+            <a href="#home" className="footer--return">
+              <span>Return to top</span>
+              <MdOutlineKeyboardDoubleArrowUp />
+            </a>
           </li>
         </ul>
       </nav>
+
+      <div className="footer--foot">
+        <div className="footer--copyright">
+          Designed & developed by me &copy; 2023
+        </div>
+
+        <div className="footer--hero-img-link">
+          <span>hero image was created by </span>
+          <a
+            href="https://www.freepik.com/free-vector/flat-creativity-concept-illustration_14620625.htm#query=illustrations&position=10&from_view=keyword&track=sph#position=10&query=illustrations"
+            target="_blank"
+            rel="noreferrer"
+          >
+            pikisuperstar <FaExternalLinkAlt />
+          </a>
+        </div>
+      </div>
     </footer>
   )
 }
