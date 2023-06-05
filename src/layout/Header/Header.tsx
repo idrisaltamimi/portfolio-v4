@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 
-// import logo from "../../assets/logo.svg"
 import "./Header.scss"
 
 export default function Header() {
@@ -12,24 +11,39 @@ export default function Header() {
         {logo}
       </a>
       <button
+        data-toggle-navbar={toggleNavbar}
         className="burger-logo"
-        aria-label="burger icon"
+        aria-label="burger icon button"
         onClick={() => setToggleNavbar((prev) => !prev)}
-      />
+      >
+        <div aria-label="burger icon" />
+      </button>
       <nav data-toggle-navbar={toggleNavbar}>
         <ul>
           <li>
-            <a href="#portfolio" aria-label="navigate to portfolio section">
+            <a
+              onClick={() => setToggleNavbar(false)}
+              href="#portfolio"
+              aria-label="navigate to portfolio section"
+            >
               portfolio
             </a>
           </li>
           <li>
-            <a href="#about" aria-label="navigate to about section">
+            <a
+              onClick={() => setToggleNavbar(false)}
+              href="#about"
+              aria-label="navigate to about section"
+            >
               about
             </a>
           </li>
           <li>
-            <a href="#contact" aria-label="navigate to contact section">
+            <a
+              onClick={() => setToggleNavbar(false)}
+              href="#contact"
+              aria-label="navigate to contact section"
+            >
               contact
             </a>
           </li>
