@@ -25,6 +25,7 @@ footer {
 }
 
 .footer--return {
+  padding: 1.25em 1.6125em;
   transition: transform 200ms ease-in;
   svg {
     transition: transform 200ms ease-in;
@@ -34,7 +35,7 @@ footer {
   &:focus-visible {
     transform: translateY(-0.25rem);
     svg {
-      transform: translateY(-0.75rem);
+      transform: translateY(-0.3125rem);
     }
   }
 }
