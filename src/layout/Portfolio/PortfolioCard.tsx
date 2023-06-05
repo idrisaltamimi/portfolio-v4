@@ -79,7 +79,7 @@ export default function PortfolioCard({
               target="_blank"
               rel="noreferrer"
             >
-              Visit Project <FaExternalLinkAlt />
+              View Project <FaExternalLinkAlt />
             </a>
             <a
               href={githubUrl}
