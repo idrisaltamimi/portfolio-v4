@@ -10,8 +10,13 @@ export default function Footer() {
       <nav>
         <ul>
           <li>
-            <a href="#home">
-              <img src={logo} alt="" width={60} height={60} />
+            <a href="#home" aria-label="navigate to home section">
+              <img
+                src={logo}
+                alt="website logo my initials IA"
+                width={60}
+                height={60}
+              />
             </a>
           </li>
           <li>
@@ -34,6 +39,7 @@ export default function Footer() {
             href="https://www.freepik.com/free-vector/flat-creativity-concept-illustration_14620625.htm#query=illustrations&position=10&from_view=keyword&track=sph#position=10&query=illustrations"
             target="_blank"
             rel="noreferrer"
+            aria-label="hero image link"
           >
             pikisuperstar <FaExternalLinkAlt />
           </a>
