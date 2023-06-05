@@ -1,4 +1,4 @@
-import { FaNodeJs, FaReact, FaTwitter } from "react-icons/fa"
+import { FaNodeJs, FaReact } from "react-icons/fa"
 import { TbBrandNextjs } from "react-icons/tb"
 import {
   SiTypescript,
@@ -51,6 +51,9 @@ export default function Portfolio() {
               <FaNodeJs />,
               <SiOpenai />
             ]}
+            description="The application utilizes openAI API to provide a chatbot, a regex code generator, a random data generator and API mocking tool, and a recipe generator."
+            githubUrl="https://github.com/idrisaltamimi/gpt-omni.git"
+            webUrl="https://gpt-omni.netlify.app/"
           />
           <PortfolioCard
             name="Kanban"
@@ -64,6 +67,9 @@ export default function Portfolio() {
               <SiExpress />,
               <SiMongodb />
             ]}
+            description="Task management web application created using MERN stack"
+            githubUrl="https://github.com/idrisaltamimi/task-manager.git"
+            webUrl="https://dreamy-dasik-96dfe4.netlify.app"
           />
           <PortfolioCard
             name="Personal Website"
@@ -77,6 +83,9 @@ export default function Portfolio() {
               <SiSass />,
               <SiFramer />
             ]}
+            description="My personal portfolio website"
+            githubUrl="https://github.com/idrisaltamimi/portfolio-v4.git"
+            webUrl="https://idrisaltamimi.com/"
           />
         </PortfolioSubSection>
 
@@ -93,12 +102,14 @@ export default function Portfolio() {
               <SiPrisma />,
               <SiTrpc />
             ]}
+            description="A twitter clone created using the T3 stack"
+            githubUrl="https://github.com/idrisaltamimi/twitter-clone.git"
+            webUrl="https://twitter-clone-theta-opal.vercel.app/"
           />
           <PortfolioCard
             name="DALL-E Clone"
             image={dalle}
             logo={openAiIcon}
-            smallLogo
             techStack={[
               <FaReact />,
               <SiTypescript />,
@@ -107,14 +118,14 @@ export default function Portfolio() {
               <SiExpress />,
               <SiMongodb />
             ]}
+            description="A DALL-E Clone created using MERN stack"
+            githubUrl="https://github.com/idrisaltamimi/dall-e-ai.git"
+            webUrl="https://dall-e-ai.netlify.app/"
           />
         </PortfolioSubSection>
       </div>
 
       <div className="portfolio--overlay-text overlay-text">Projects</div>
-      {pattern1Svg}
     </Section>
   )
 }
-
-const pattern1Svg = ""

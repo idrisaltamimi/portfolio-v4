@@ -1,4 +1,8 @@
-import { type ReactNode } from "react"
+import { useState, type ReactNode } from "react"
+import { FaExternalLinkAlt } from "react-icons/fa"
+import { FaGithubAlt } from "react-icons/fa"
+import { GrClose } from "react-icons/gr"
+
 import "./PortfolioCard.scss"
 
 type PortfolioCardProps = {
@@ -8,6 +12,9 @@ type PortfolioCardProps = {
   techStack: ReactNode[]
   smallLogo?: boolean
   center?: boolean
+  description: string
+  githubUrl: string
+  webUrl: string
 }
 
 export default function PortfolioCard({
@@ -16,20 +23,27 @@ export default function PortfolioCard({
   logo,
   techStack,
   smallLogo = false,
-  center = false
+  center = false,
+  description,
+  githubUrl,
+  webUrl
 }: PortfolioCardProps) {
+  const [flipCard, setFlipCard] = useState(false)
+
   return (
     <>
       <li className="portfolio--card">
-        <button>
+        <button onClick={() => setFlipCard(true)}>
           <div className="portfolio--card-img-wrapper">
             <img
               src={logo}
               className="card-logo"
               alt=""
               width={200}
+              height={100}
               loading="lazy"
               data-smalllogo={smallLogo}
+              data-flip-card={flipCard}
             />
             <img
               className="card-img"
@@ -52,6 +66,31 @@ export default function PortfolioCard({
 
           <span className="see-more">See {"\n"} more</span>
         </button>
+        <div data-card-flip={flipCard} className="portfolio--card-flipped">
+          <button onClick={() => setFlipCard(false)} className="flipped-close">
+            <GrClose />
+          </button>
+          <p>{description}</p>
+
+          <div className="flipped-actions">
+            <a
+              href={webUrl}
+              className="flipped-website button"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit Project <FaExternalLinkAlt />
+            </a>
+            <a
+              href={githubUrl}
+              className="flipped-github"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub <FaGithubAlt />
+            </a>
+          </div>
+        </div>
       </li>
     </>
   )

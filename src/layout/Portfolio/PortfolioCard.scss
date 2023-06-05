@@ -1,13 +1,14 @@
-$whiteShadow: rgba(255, 255, 255, 0.3);
+$whiteShadow: rgba(255, 255, 255, 0.2);
 
 .portfolio--card {
-  // background-color: var(--bg1);
+  position: relative;
   box-shadow: 4px 4px 5px 0 var(--shadow);
   border: 1px solid var(--shadow);
   max-width: 500px;
   width: 100%;
+  overflow-x: hidden;
 
-  button {
+  & > button {
     width: 100%;
     position: relative;
     padding: 0;
@@ -97,6 +98,7 @@ $whiteShadow: rgba(255, 255, 255, 0.3);
   .card-logo {
     position: relative;
     width: 60%;
+    height: auto;
     z-index: 10;
     transition: opacity 200ms ease-in;
     filter: drop-shadow(0 0 10px $whiteShadow);
@@ -104,6 +106,10 @@ $whiteShadow: rgba(255, 255, 255, 0.3);
 
     &[data-smalllogo="true"] {
       padding: 2.75em;
+    }
+
+    &[data-flip-card="true"] {
+      opacity: 0;
     }
   }
 
@@ -133,5 +139,110 @@ $whiteShadow: rgba(255, 255, 255, 0.3);
     background-color: var(--black);
     opacity: 0.5;
     transition: opacity 200ms ease-in;
+  }
+}
+
+// Card Flipped //
+$flippedPadding: 1em;
+.portfolio--card-flipped {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  color: white;
+  font-size: var(--fs-base);
+  font-weight: 500;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 20;
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 200ms ease-in, opacity 200ms ease-in;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #0a021e, $alpha: 0.8);
+    z-index: -1;
+  }
+
+  &[data-card-flip="true"] {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: visible;
+  }
+
+  p {
+    text-align: center;
+    margin-top: auto;
+    padding-inline: $flippedPadding;
+  }
+}
+
+.flipped-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  align-self: flex-end;
+  border: 0;
+  background-color: transparent;
+  padding: 0.5em;
+  font-size: var(--fs-md);
+
+  svg {
+    path {
+      stroke: white;
+      stroke-width: 4;
+    }
+  }
+}
+
+.flipped-actions {
+  padding: 1em 1em;
+  background-color: white;
+  margin-top: auto;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flipped-website {
+  align-self: stretch;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5em 0.75em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25em;
+}
+
+.flipped-github {
+  color: var(--black);
+  text-decoration: none;
+
+  padding: 0.5em 0.75em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25em;
+
+  transition: color 200ms ease-in;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--accent);
   }
 }
