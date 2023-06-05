@@ -21,19 +21,34 @@ export default function Contact() {
             {handDownSvg}
           </div>
           <ul className="contact--social">
-            <ListItem href="https://github.com/idrisaltamimi">
+            <ListItem
+              href="https://github.com/idrisaltamimi"
+              aria-label="my github link"
+            >
               <FaGithubAlt />
             </ListItem>
-            <ListItem href="https://www.linkedin.com/in/idris-altamimi-a147b3246/">
+            <ListItem
+              href="https://www.linkedin.com/in/idris-altamimi-a147b3246/"
+              aria-label="my linkedin link"
+            >
               <FiLinkedin />
             </ListItem>
-            <ListItem href="https://twitter.com/idris_altamimi">
+            <ListItem
+              href="https://twitter.com/idris_altamimi"
+              aria-label="my twitter link"
+            >
               <FaTwitter />
             </ListItem>
-            <ListItem href="https://www.instagram.com/idris.altamimi/">
+            <ListItem
+              href="https://www.instagram.com/idris.altamimi/"
+              aria-label="my instagram link"
+            >
               <AiFillInstagram />
             </ListItem>
-            <ListItem href="https://codepen.io/idrisaltaimimi">
+            <ListItem
+              href="https://codepen.io/idrisaltaimimi"
+              aria-label="my codepen link"
+            >
               <FaCodepen />
             </ListItem>
           </ul>
@@ -56,7 +71,7 @@ export default function Contact() {
           />
           <Textarea label="Message" id="message" />
 
-          <Button className="form--send">
+          <Button className="form--send" aria-label="send message">
             <BiPaperPlane /> <span>Send Message</span>
           </Button>
         </form>
