@@ -67,7 +67,11 @@ export default function PortfolioCard({
           <span className="see-more">See {"\n"} more</span>
         </button>
         <div data-card-flip={flipCard} className="portfolio--card-flipped">
-          <button onClick={() => setFlipCard(false)} className="flipped-close">
+          <button
+            onClick={() => setFlipCard(false)}
+            className="flipped-close"
+            aria-label="close portfolio card"
+          >
             <GrClose />
           </button>
           <p>{description}</p>
@@ -78,6 +82,7 @@ export default function PortfolioCard({
               className="flipped-website button"
               target="_blank"
               rel="noreferrer"
+              aria-label={`${name} web app link`}
             >
               View Project <FaExternalLinkAlt />
             </a>
@@ -86,6 +91,7 @@ export default function PortfolioCard({
               className="flipped-github"
               target="_blank"
               rel="noreferrer"
+              aria-label={`${name} github link`}
             >
               GitHub <FaGithubAlt />
             </a>
