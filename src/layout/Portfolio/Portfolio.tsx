@@ -33,9 +33,9 @@ export default function Portfolio() {
   return (
     <Section className="portfolio" id="portfolio">
       <div className="section--wrapper">
-        <h2>My Projects</h2>
+        <h2>My Projects,</h2>
         <span className="portfolio--subtitle">
-          Here a selection of projects I've worked on.
+          Here are a selection of projects I've worked on,
         </span>
 
         <PortfolioSubSection title="Personal Websites">

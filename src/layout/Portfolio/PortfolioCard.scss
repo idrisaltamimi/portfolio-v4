@@ -2,7 +2,7 @@ $whiteShadow: rgba(255, 255, 255, 0.2);
 
 .portfolio--card {
   position: relative;
-  box-shadow: 4px 4px 5px 0 var(--shadow);
+  box-shadow: 4px 4px 0 0 var(--shadow), 8px 8px 0 0 var(--shadow);
   border: 1px solid var(--shadow);
   max-width: 500px;
   width: 100%;
