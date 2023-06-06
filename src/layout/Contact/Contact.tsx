@@ -1,13 +1,34 @@
-import { type ReactNode } from "react"
+import { type FormEvent, useRef, type ReactNode } from "react"
 import { BiPaperPlane } from "react-icons/bi"
 import { FaCodepen, FaGithubAlt, FaTwitter } from "react-icons/fa"
 import { FiLinkedin } from "react-icons/fi"
 import { AiFillInstagram } from "react-icons/ai"
+import emailjs from "@emailjs/browser"
 
 import { Button, Section, Textarea, Textfield } from "../../components"
 import "./Contact.scss"
 
 export default function Contact() {
+  const formRef = useRef<HTMLFormElement>(null)
+
+  const sendEmail = (e: FormEvent) => {
+    e.preventDefault()
+
+    const target = e.target as HTMLFormElement
+
+    if (formRef.current) {
+      emailjs
+        .sendForm(
+          "service_gm27rxn",
+          "idris_portfolio",
+          formRef.current,
+          "pk9fRrp1BnP5QG7kg"
+        )
+        .then(() => target.reset())
+        .catch(() => alert("something went wrong"))
+    }
+  }
+
   return (
     <Section id="contact" className="contact--section">
       <div className="section--wrapper contact--wrapper">
@@ -54,7 +75,8 @@ export default function Contact() {
           </ul>
           {arrowSvg}
         </div>
-        <form>
+
+        <form ref={formRef} onSubmit={sendEmail}>
           <div className="input-wrapper">
             <Textfield
               label="Name"
@@ -71,7 +93,11 @@ export default function Contact() {
           />
           <Textarea label="Message" id="message" />
 
-          <Button className="form--send" aria-label="send message">
+          <Button
+            className="form--send"
+            aria-label="send message"
+            type="submit"
+          >
             <BiPaperPlane /> <span>Send Message</span>
           </Button>
         </form>

@@ -2,6 +2,7 @@ import { useState } from "react"
 import "./Textfield.scss"
 
 type TextfieldProps = {
+  id: string
   label: string
   className?: string
 } & React.DetailedHTMLProps<
@@ -10,6 +11,7 @@ type TextfieldProps = {
 >
 
 export default function Textfield({
+  id,
   label,
   className = "",
   ...props
@@ -27,7 +29,14 @@ export default function Textfield({
       onBlur={() => setFocus(false)}
     >
       <span className="label">{label}</span>
-      <input type="text" onBlur={handleBlur} required {...props} />
+      <input
+        id={id}
+        name={id}
+        type="text"
+        onBlur={handleBlur}
+        required
+        {...props}
+      />
       <span className="input-bar" />
     </label>
   )
