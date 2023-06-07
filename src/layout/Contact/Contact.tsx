@@ -82,7 +82,7 @@ export default function Contact() {
               label="Name"
               id="name"
               type="text"
-              pattern="^[a-zA-Z0-9]{1,50}$"
+              pattern="[a-zA-Z0-9\s]*$"
             />
           </div>
           <Textfield
