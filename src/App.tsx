@@ -8,7 +8,6 @@ function App() {
       <main>
         <Home />
         <Portfolio />
-        {/* <About /> */}
         <Contact />
       </main>
       <Footer />
