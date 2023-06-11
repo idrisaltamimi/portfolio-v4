@@ -1,6 +1,12 @@
 $whiteShadow: rgba(255, 255, 255, 0.2);
 
 .portfolio--card {
+  &[data-hidden="true"] {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  justify-self: center;
   position: relative;
   box-shadow: 4px 4px 0 0 var(--shadow), 8px 8px 0 0 var(--shadow);
   border: 1px solid var(--shadow);
@@ -220,10 +226,11 @@ $flippedPadding: 1em;
 }
 
 .flipped-website {
+  flex-grow: 1;
   align-self: stretch;
   text-decoration: none;
   font-weight: 600;
-  padding: 0.5em 0.75em;
+  padding: 1em 0.75em;
   white-space: nowrap;
 
   font-size: var(--fs-base);
@@ -232,7 +239,7 @@ $flippedPadding: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.25em;
+  gap: 0.5em;
 }
 
 .flipped-github {

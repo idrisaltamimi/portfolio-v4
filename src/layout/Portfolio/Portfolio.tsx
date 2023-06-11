@@ -122,6 +122,16 @@ export default function Portfolio() {
             githubUrl="https://github.com/idrisaltamimi/dall-e-ai.git"
             webUrl="https://dall-e-ai.netlify.app/"
           />
+          {/* <PortfolioCard
+            hidden
+            name=""
+            image={""}
+            logo={""}
+            techStack={[]}
+            description=""
+            githubUrl=""
+            webUrl=""
+          /> */}
         </PortfolioSubSection>
       </div>
 

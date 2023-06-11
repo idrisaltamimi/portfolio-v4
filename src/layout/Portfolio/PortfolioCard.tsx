@@ -11,6 +11,7 @@ type PortfolioCardProps = {
   logo: string
   techStack: ReactNode[]
   smallLogo?: boolean
+  hidden?: boolean
   center?: boolean
   description: string
   githubUrl: string
@@ -23,6 +24,7 @@ export default function PortfolioCard({
   logo,
   techStack,
   smallLogo = false,
+  hidden = false,
   center = false,
   description,
   githubUrl,
@@ -32,7 +34,7 @@ export default function PortfolioCard({
 
   return (
     <>
-      <li className="portfolio--card">
+      <li className="portfolio--card" data-hidden={hidden}>
         <button onClick={() => setFlipCard(true)}>
           <div className="portfolio--card-img-wrapper">
             <img
