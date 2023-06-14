@@ -25,7 +25,15 @@ import {
   openAiIcon,
   portfolio,
   dalle,
-  twitter
+  twitter,
+  lazyImage,
+  lazyImageIcon,
+  gptOmniSmall,
+  kanbanSmall,
+  portfolioSmall,
+  lazyImageSmall,
+  twitterSmall,
+  dalleSmall
 } from "../../assets"
 import "./Portfolio.scss"
 
@@ -42,6 +50,7 @@ export default function Portfolio() {
           <PortfolioCard
             name="GPT-OMNI"
             image={gptOmni}
+            placeholderImage={gptOmniSmall}
             logo={gptOmniIcon}
             center
             techStack={[
@@ -58,6 +67,7 @@ export default function Portfolio() {
           <PortfolioCard
             name="Kanban"
             image={kanban}
+            placeholderImage={kanbanSmall}
             logo={kanbanIcon}
             techStack={[
               <FaReact />,
@@ -74,6 +84,7 @@ export default function Portfolio() {
           <PortfolioCard
             name="Personal Website"
             image={portfolio}
+            placeholderImage={portfolioSmall}
             logo={logoIcon}
             smallLogo
             center
@@ -89,10 +100,24 @@ export default function Portfolio() {
           />
         </PortfolioSubSection>
 
+        <PortfolioSubSection title="npm Packages">
+          <PortfolioCard
+            name="Lazy Image Loader"
+            image={lazyImage}
+            placeholderImage={lazyImageSmall}
+            logo={lazyImageIcon}
+            techStack={[<FaReact />, <SiTypescript />, <SiCss3 />]}
+            description="A versatile and customizable image loading component for React apps that provides an elegant way to handle image loading states while the image is being downloaded."
+            githubUrl="https://github.com/idrisaltamimi/react-lazy-load-img-component.git"
+            webUrl="https://www.npmjs.com/package/react-lazy-load-img-component"
+          />
+        </PortfolioSubSection>
+
         <PortfolioSubSection title="Cloned Websites">
           <PortfolioCard
             name="Twitter Clone"
             image={twitter}
+            placeholderImage={twitterSmall}
             logo={twitterIcon}
             smallLogo
             techStack={[
@@ -109,6 +134,7 @@ export default function Portfolio() {
           <PortfolioCard
             name="DALL-E Clone"
             image={dalle}
+            placeholderImage={dalleSmall}
             logo={openAiIcon}
             techStack={[
               <FaReact />,
@@ -116,22 +142,13 @@ export default function Portfolio() {
               <SiTailwindcss />,
               <FaNodeJs />,
               <SiExpress />,
-              <SiMongodb />
+              <SiMongodb />,
+              <SiOpenai />
             ]}
             description="A DALL-E Clone created using MERN stack"
             githubUrl="https://github.com/idrisaltamimi/dall-e-ai.git"
             webUrl="https://dall-e-ai.netlify.app/"
           />
-          {/* <PortfolioCard
-            hidden
-            name=""
-            image={""}
-            logo={""}
-            techStack={[]}
-            description=""
-            githubUrl=""
-            webUrl=""
-          /> */}
         </PortfolioSubSection>
       </div>
 

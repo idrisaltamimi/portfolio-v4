@@ -2,12 +2,14 @@ import { useState, type ReactNode } from "react"
 import { FaExternalLinkAlt } from "react-icons/fa"
 import { FaGithubAlt } from "react-icons/fa"
 import { GrClose } from "react-icons/gr"
+import ImageComponent from "react-lazy-load-img-component"
 
 import "./PortfolioCard.scss"
 
 type PortfolioCardProps = {
   name: string
   image: string
+  placeholderImage: string
   logo: string
   techStack: ReactNode[]
   smallLogo?: boolean
@@ -21,6 +23,7 @@ type PortfolioCardProps = {
 export default function PortfolioCard({
   name,
   image,
+  placeholderImage,
   logo,
   techStack,
   smallLogo = false,
@@ -47,13 +50,13 @@ export default function PortfolioCard({
               data-smalllogo={smallLogo}
               data-flip-card={flipCard}
             />
-            <img
+            <ImageComponent
               className="card-img"
               src={image}
+              placeholderSrc={placeholderImage}
               alt=""
               width={400}
               height={400}
-              loading="lazy"
               data-center={center}
             />
           </div>

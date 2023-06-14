@@ -12,7 +12,7 @@ $whiteShadow: rgba(255, 255, 255, 0.2);
   border: 1px solid var(--shadow);
   max-width: 500px;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 
   & > button {
     width: 100%;
@@ -126,10 +126,15 @@ $whiteShadow: rgba(255, 255, 255, 0.2);
     width: 100%;
     height: 100%;
     aspect-ratio: 1;
-    object-fit: cover;
-    object-position: top;
     filter: saturate(150%);
     -webkit-filter: saturate(150%);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
 
     &[data-center="true"] {
       object-position: center;
@@ -190,6 +195,7 @@ $flippedPadding: 1em;
 
   p {
     font-size: var(--fs-base);
+    line-height: 1.5;
     font-weight: 500;
     text-align: center;
     margin-top: auto;
