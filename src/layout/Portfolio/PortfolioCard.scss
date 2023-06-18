@@ -246,6 +246,18 @@ $flippedPadding: 1em;
   align-items: center;
   justify-content: center;
   gap: 0.5em;
+
+  border: 0;
+  color: white;
+  background-size: 100% 100%;
+  background-image: none;
+  background-color: var(--accent);
+  transition: background-color 200ms ease-in;
+
+  &:hover,
+  &:focus-visible {
+    background-color: rgba($color: #4831d4, $alpha: 0.93);
+  }
 }
 
 .flipped-github {

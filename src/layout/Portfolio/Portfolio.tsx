@@ -46,7 +46,7 @@ export default function Portfolio() {
           Here are a selection of projects I've worked on,
         </span>
 
-        <PortfolioSubSection title="Personal Websites">
+        <PortfolioSubSection>
           <PortfolioCard
             name="GPT-OMNI"
             image={gptOmni}
@@ -98,22 +98,18 @@ export default function Portfolio() {
             githubUrl="https://github.com/idrisaltamimi/portfolio-v4.git"
             webUrl="https://idrisaltamimi.com/"
           />
-        </PortfolioSubSection>
 
-        <PortfolioSubSection title="npm Packages">
           <PortfolioCard
             name="Lazy Image Loader"
             image={lazyImage}
             placeholderImage={lazyImageSmall}
             logo={lazyImageIcon}
             techStack={[<FaReact />, <SiTypescript />, <SiCss3 />]}
-            description="A versatile and customizable image loading component for React apps that provides an elegant way to handle image loading states while the image is being downloaded."
+            description="A versatile and customizable image npm loading component for React apps that provides an elegant way to handle image loading states while the image is being downloaded."
             githubUrl="https://github.com/idrisaltamimi/react-lazy-load-img-component.git"
             webUrl="https://www.npmjs.com/package/react-lazy-load-img-component"
           />
-        </PortfolioSubSection>
 
-        <PortfolioSubSection title="Cloned Websites">
           <PortfolioCard
             name="Twitter Clone"
             image={twitter}
@@ -150,6 +146,14 @@ export default function Portfolio() {
             webUrl="https://dall-e-ai.netlify.app/"
           />
         </PortfolioSubSection>
+
+        {/* <PortfolioSubSection title="npm Packages">
+         
+        </PortfolioSubSection>
+
+        <PortfolioSubSection title="Cloned Websites">
+
+        </PortfolioSubSection> */}
       </div>
 
       <div className="portfolio--overlay-text overlay-text">Projects</div>
