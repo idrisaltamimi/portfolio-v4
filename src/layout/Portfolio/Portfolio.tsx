@@ -1,4 +1,4 @@
-import { FaNodeJs, FaReact } from "react-icons/fa"
+import { FaNodeJs, FaNpm, FaReact } from "react-icons/fa"
 import { TbBrandNextjs } from "react-icons/tb"
 import {
   SiTypescript,
@@ -22,9 +22,9 @@ import {
   kanbanIcon,
   twitterIcon,
   logoIcon,
-  openAiIcon,
+  // openAiIcon,
   portfolio,
-  dalle,
+  // dalle,
   twitter,
   lazyImage,
   lazyImageIcon,
@@ -32,8 +32,8 @@ import {
   kanbanSmall,
   portfolioSmall,
   lazyImageSmall,
-  twitterSmall,
-  dalleSmall
+  twitterSmall
+  // dalleSmall
 } from "../../assets"
 import "./Portfolio.scss"
 
@@ -104,7 +104,7 @@ export default function Portfolio() {
             image={lazyImage}
             placeholderImage={lazyImageSmall}
             logo={lazyImageIcon}
-            techStack={[<FaReact />, <SiTypescript />, <SiCss3 />]}
+            techStack={[<FaReact />, <SiTypescript />, <SiCss3 />, <FaNpm />]}
             description="A versatile and customizable image npm loading component for React apps that provides an elegant way to handle image loading states while the image is being downloaded."
             githubUrl="https://github.com/idrisaltamimi/react-lazy-load-img-component.git"
             webUrl="https://www.npmjs.com/package/react-lazy-load-img-component"
@@ -127,7 +127,7 @@ export default function Portfolio() {
             githubUrl="https://github.com/idrisaltamimi/twitter-clone.git"
             webUrl="https://twitter-clone-theta-opal.vercel.app/"
           />
-          <PortfolioCard
+          {/* <PortfolioCard
             name="DALL-E Clone"
             image={dalle}
             placeholderImage={dalleSmall}
@@ -144,18 +144,9 @@ export default function Portfolio() {
             description="A DALL-E Clone created using MERN stack"
             githubUrl="https://github.com/idrisaltamimi/dall-e-ai.git"
             webUrl="https://dall-e-ai.netlify.app/"
-          />
+          /> */}
         </PortfolioSubSection>
-
-        {/* <PortfolioSubSection title="npm Packages">
-         
-        </PortfolioSubSection>
-
-        <PortfolioSubSection title="Cloned Websites">
-
-        </PortfolioSubSection> */}
       </div>
-
       <div className="portfolio--overlay-text overlay-text">Projects</div>
     </Section>
   )

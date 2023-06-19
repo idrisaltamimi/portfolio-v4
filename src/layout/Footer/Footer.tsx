@@ -30,7 +30,7 @@ export default function Footer() {
 
       <div className="footer--foot">
         <div className="footer--copyright">
-          Designed & developed by me &copy; 2023
+          Designed & developed by Idris AlTamimi &copy; 2023
         </div>
 
         <div className="footer--hero-img-link">
