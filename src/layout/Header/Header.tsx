@@ -1,15 +1,26 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 import "./Header.scss"
 
-export default function Header() {
+type HeaderProps = {
+  resume: boolean
+}
+
+export default function Header({ resume = false }: HeaderProps) {
   const [toggleNavbar, setToggleNavbar] = useState(false)
 
   return (
     <header>
-      <a href="#home" aria-label="navigate to home section">
-        {logo}
-      </a>
+      {resume ? (
+        <Link to="/" aria-label="navigate to Home page">
+          {logo}
+        </Link>
+      ) : (
+        <a href="#home" aria-label="navigate to home section">
+          {logo}
+        </a>
+      )}
       <button
         data-toggle-navbar={toggleNavbar}
         className="burger-logo"
@@ -20,32 +31,55 @@ export default function Header() {
       </button>
       <nav data-toggle-navbar={toggleNavbar}>
         <ul>
+          {resume ? (
+            <li>
+              <Link
+                onClick={() => setToggleNavbar(false)}
+                to="/"
+                aria-label="navigate to Home page"
+              >
+                home
+              </Link>
+            </li>
+          ) : (
+            <>
+              <li>
+                <a
+                  onClick={() => setToggleNavbar(false)}
+                  href="#portfolio"
+                  aria-label="navigate to portfolio section"
+                >
+                  portfolio
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => setToggleNavbar(false)}
+                  href="#about"
+                  aria-label="navigate to about section"
+                >
+                  about
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => setToggleNavbar(false)}
+                  href="#contact"
+                  aria-label="navigate to contact section"
+                >
+                  contact
+                </a>
+              </li>
+            </>
+          )}
           <li>
-            <a
+            <Link
               onClick={() => setToggleNavbar(false)}
-              href="#portfolio"
-              aria-label="navigate to portfolio section"
+              to="/resume"
+              aria-label="navigate to Resume page"
             >
-              portfolio
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => setToggleNavbar(false)}
-              href="#about"
-              aria-label="navigate to about section"
-            >
-              about
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => setToggleNavbar(false)}
-              href="#contact"
-              aria-label="navigate to contact section"
-            >
-              contact
-            </a>
+              resume
+            </Link>
           </li>
         </ul>
       </nav>

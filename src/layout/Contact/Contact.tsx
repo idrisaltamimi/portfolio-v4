@@ -49,7 +49,7 @@ export default function Contact() {
               <FaGithubAlt />
             </ListItem>
             <ListItem
-              href="https://www.linkedin.com/in/idris-altamimi-a147b3246/"
+              href="https://www.linkedin.com/in/idrisalt/"
               aria-label="my linkedin link"
             >
               <FiLinkedin />
