@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import "./Header.scss"
 
 type HeaderProps = {
-  resume: boolean
+  resume?: boolean
 }
 
 export default function Header({ resume = false }: HeaderProps) {
@@ -72,7 +72,7 @@ export default function Header({ resume = false }: HeaderProps) {
               </li>
             </>
           )}
-          <li>
+          {/* <li>
             <Link
               onClick={() => setToggleNavbar(false)}
               to="/resume"
@@ -80,7 +80,7 @@ export default function Header({ resume = false }: HeaderProps) {
             >
               resume
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
       {toggleNavbar && (

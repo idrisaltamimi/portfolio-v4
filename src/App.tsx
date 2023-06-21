@@ -1,18 +1,15 @@
-import { Contact, Footer, Home, Portfolio, Header } from "./layout"
+// import { lazy } from "react"
+import { Route, Routes } from "react-router-dom"
+import { Main } from "./pages"
+// const Resume = lazy(() => import("./pages/Resume"))
 import "./_customClasses.scss"
 
 function App() {
   return (
-    <>
-      <Header />
-      <main>
-        <Home />
-        <Portfolio />
-        {/* <About /> */}
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<Main />} />
+      {/* <Route path="/resume" element={<Resume />} /> */}
+    </Routes>
   )
 }
 

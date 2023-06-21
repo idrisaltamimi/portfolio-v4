@@ -1,0 +1,212 @@
+$paddingBlock: 0.25in;
+$paddingInline: 0.25in;
+$fs: 14px;
+
+.resume--section {
+  margin-inline: auto;
+  margin-block: 4rem;
+  max-width: calc(1440px + (var(--section-padding) * 2));
+  width: 100%;
+  // padding-inline: var(--section-padding);
+  padding-block: 4rem;
+}
+
+.resume--section-wrapper {
+  margin-inline: auto;
+  max-width: 8.5in;
+  width: 100%;
+  position: relative;
+  background-color: #ebebef;
+  padding-inline: $paddingInline;
+  padding-block: $paddingBlock;
+  width: 100%;
+  aspect-ratio: 1 / 1.294;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.resume--section-wrapper {
+  aside {
+    position: absolute;
+    right: $paddingInline;
+    top: $paddingBlock;
+
+    a {
+      text-decoration: none;
+      font-size: $fs;
+      color: var(--gray);
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      transition: color 200ms ease;
+      &:hover,
+      &:focus-visible {
+        color: var(--accent);
+      }
+    }
+  }
+
+  h1 {
+    white-space: pre-line;
+    font-size: calc(var(--fs-lg) + 1rem);
+    color: var(--black);
+  }
+
+  h2 {
+    font-size: calc(var(--fs-md) + 0.25rem);
+    color: var(--gray);
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: var(--fs-base);
+    font-size: 600;
+  }
+
+  p {
+    font-size: 16px;
+    color: var(--gray);
+    line-height: 26px;
+  }
+}
+
+.resume-row1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-row2 {
+  & > p {
+    margin-bottom: 1rem;
+  }
+  hr {
+    max-width: 480px;
+    border-color: transparent;
+    border-bottom-color: var(--shadow);
+  }
+}
+
+// resume links
+.resume--links {
+  margin-bottom: 2.5rem;
+  padding-left: 0;
+  list-style: none;
+
+  font-size: $fs;
+  font-weight: 600;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  li a {
+    text-decoration: none;
+    color: var(--gray);
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+
+    svg {
+      width: 20px;
+      display: flex;
+      place-items: center;
+    }
+  }
+}
+
+// resume skills
+.resume--skills {
+  margin-top: 1rem;
+  padding-left: calc(var(--fs-sm) * 1.5);
+  list-style: circle;
+  font-size: $fs;
+  font-weight: 400;
+  color: var(--gray);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+// experience
+.resume--experience {
+  margin-top: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  h3 {
+    color: var(--accent);
+  }
+
+  article {
+    & > div {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & > span {
+        color: var(--gray);
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+    h3 {
+      font-weight: 600;
+      span {
+        color: var(--gray);
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+
+    ul,
+    p {
+      max-width: 82%;
+    }
+  }
+
+  p {
+    margin-block: 0.5rem;
+  }
+
+  ul {
+    font-size: 16px;
+    padding-left: var(--fs-base);
+    color: var(--gray);
+    li {
+      line-height: 26px;
+    }
+  }
+}
+
+.resume--experience-header {
+  h3 {
+    position: relative;
+    z-index: 1;
+    display: inline;
+    font-size: calc(var(--fs-base) + 0.25rem);
+    font-weight: 700;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 6px;
+      width: 100%;
+      background-color: var(--shadow);
+      z-index: -1;
+    }
+  }
+}
