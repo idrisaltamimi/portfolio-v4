@@ -21,22 +21,40 @@ export default function Resume() {
               <FaFileDownload /> <span>Download</span>
             </Link>
           </aside>
+          <h1>Idris AlTamimi</h1>
+          <h2>Frontend Developer and UX Designer</h2>
+          <p>
+            Web Developer valued for creating engaging, high-performance, and
+            accessible web experiences.
+          </p>
+          <hr />
 
-          <div className="resume-row1">
-            <Links />
-            <h3>Core Technologies</h3>
-            <Skills />
-          </div>
+          <div className="resume--rows-container">
+            <div className="resume-row2">
+              <Experience />
+            </div>
 
-          <div className="resume-row2">
-            <h1>Idris {"\n"} AlTamimi</h1>
-            <h2>Frontend Developer and UX Designer</h2>
-            <p>
-              Web Developer valued for creating engaging, high-performance, and
-              accessible web experiences.
-            </p>
-            <hr />
-            <Experience />
+            <div className="resume-row1">
+              <Links />
+              <h3>Core Technologies</h3>
+              <Skills />
+              {/* <h3>Certificates</h3>
+            <ul className="resume--skills">
+              <li>
+                Brainnest Frontend Development Industry Training{" "}
+                <span>
+                  4 weeks (4 hours a day + Individual Work + Team Collaboration)
+                </span>
+              </li>
+              <li>
+                Scrimba's Frontend Developer Career Path
+                <span>
+                  Estimated 80 hours of course work covering HTML, CSS,
+                  Responsive Design, JavaScript, & ReactJS.
+                </span>
+              </li>
+            </ul> */}
+            </div>
           </div>
         </section>
       </main>
@@ -105,6 +123,7 @@ function Skills() {
       <li>Node</li>
       <li>Express</li>
       <li>Prisma</li>
+      <li>MongoDB</li>
     </ul>
   )
 }
@@ -155,21 +174,23 @@ function Experience() {
           <span>Sept - Oct 2022</span>
         </div>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, nihil
-          fugiat. Illo explicabo numquam consequuntur cupiditate!
+          Brainnest is a global consulting, outsourcing, project management,
+          research, and marketing.
         </p>
         <ul>
           <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
-            dolorum.
+            Create user-friendly and responsive UI using HTML, CSS, and
+            JavaScript
           </li>
           <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
-            dolorum.
+            Enhance the User Experience (UX) by optimizing website speed,
+            creating seamless navigation, error handling and giving feedback,
+            and conducting user testing sessions to gather feedback and
+            insights.
           </li>
           <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
-            dolorum.
+            Participating in ideas storming, code reviews, and testing to ensure
+            high-quality code and maintainable applications.
           </li>
         </ul>
       </article>
