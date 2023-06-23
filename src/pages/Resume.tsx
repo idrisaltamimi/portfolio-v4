@@ -42,22 +42,6 @@ export default function Resume() {
               <Links />
               <h3>Core Technologies</h3>
               <Skills />
-              {/* <h3>Certificates</h3>
-            <ul className="resume--skills">
-              <li>
-                Brainnest Frontend Development Industry Training{" "}
-                <span>
-                  4 weeks (4 hours a day + Individual Work + Team Collaboration)
-                </span>
-              </li>
-              <li>
-                Scrimba's Frontend Developer Career Path
-                <span>
-                  Estimated 80 hours of course work covering HTML, CSS,
-                  Responsive Design, JavaScript, & ReactJS.
-                </span>
-              </li>
-            </ul> */}
             </div>
           </div>
         </section>

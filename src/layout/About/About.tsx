@@ -48,7 +48,7 @@ export default function About() {
                   Freelancer
                   <span>Web Developer</span>
                 </div>
-                <span>2022 - present</span>
+                <span>2022 — present</span>
               </button>
               <p className="about--work-content">
                 A versatile full-stack developer offering comprehensive web

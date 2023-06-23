@@ -155,18 +155,18 @@
   }
 
   box-sizing: border-box;
-  flex-basis: 95px;
+  flex-basis: 90px;
   overflow: hidden;
   transition: flex-basis 200ms ease-in, flex-grow 200ms ease-in;
 
+  // &[data-selected="true"] {
+  //   flex-basis: clamp(15rem, 28rem, 80rem);
+  // }
+  // @media (min-width: 769px) {
   &[data-selected="true"] {
-    flex-basis: clamp(15rem, 28rem, 80rem);
+    flex-basis: clamp(5rem, 40vh, 15rem);
   }
-  @media (min-width: 769px) {
-    &[data-selected="true"] {
-      flex-basis: clamp(15rem, 40vh, 20rem);
-    }
-  }
+  // }
 }
 
 // patterns and overlays //
