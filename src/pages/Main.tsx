@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet"
 
-import { Contact, Footer, Header, Home, Portfolio } from "../layout"
+import { About, Contact, Footer, Header, Home, Portfolio } from "../layout"
 
 export default function Main() {
   return (
@@ -12,7 +12,7 @@ export default function Main() {
         </Helmet>
         <Home />
         <Portfolio />
-        {/* <About /> */}
+        <About />
         <Contact />
       </main>
       <Footer />

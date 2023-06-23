@@ -21,6 +21,7 @@ import twitterIcon from "./portfolioImages/twitter-icon.svg"
 import openAiIcon from "./portfolioImages/openAi-icon.svg"
 import lazyImageIcon from "./portfolioImages/lazy-load-img-icon.svg"
 import logoIcon from "./logo.svg"
+import resume from "./resume-portfolio.pdf"
 
 export {
   gptOmni,
@@ -40,5 +41,6 @@ export {
   twitterSmall,
   dalleSmall,
   portfolioSmall,
-  lazyImageSmall
+  lazyImageSmall,
+  resume
 }

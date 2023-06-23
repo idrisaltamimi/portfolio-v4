@@ -51,15 +51,9 @@ export default function About() {
                 <span>2022 - present</span>
               </button>
               <p className="about--work-content">
-                aa Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Odio corrupti dolore autem cumque perspiciatis sit, quibusdam
-                eaque dicta dolorum voluptas ullam excepturi laboriosam atque
-                impedit accusantium soluta possimus praesentium voluptatum.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Labore
-                assumenda in doloremque deleniti culpa autem, ipsam quo sed
-                recusandae voluptates ipsum itaque quidem, rerum, eos numquam at
-                non quam! Quidem. zz
+                A versatile full-stack developer offering comprehensive web
+                development services, ranging from creating new websites to
+                testing and resolving issues in existing ones.
               </p>
             </div>
 
@@ -75,10 +69,8 @@ export default function About() {
                 <span>2022</span>
               </button>
               <p className="about--work-content">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
-                corrupti dolore autem cumque perspiciatis sit, quibusdam eaque
-                dicta dolorum voluptas ullam excepturi laboriosam atque impedit
-                accusantium soluta possimus praesentium voluptatum.
+                Designing and developing user-facing interfaces for web
+                applications.
               </p>
             </div>
           </div>

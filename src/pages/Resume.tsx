@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom"
 import { Helmet } from "react-helmet"
 import { FaFileDownload, FaGithubAlt } from "react-icons/fa"
 import { FiLinkedin } from "react-icons/fi"
 import { SiGmail } from "react-icons/si"
 
 import { Header } from "../layout"
+import { resume } from "../assets"
 import "./Resume.scss"
 
 export default function Resume() {
@@ -17,9 +17,13 @@ export default function Resume() {
         </Helmet>
         <section className="resume--section-wrapper">
           <aside>
-            <Link to="/" aria-label="Download a PDF copy of this resume">
+            <a
+              href={resume}
+              download
+              aria-label="Download a PDF copy of this resume"
+            >
               <FaFileDownload /> <span>Download</span>
-            </Link>
+            </a>
           </aside>
           <h1>Idris AlTamimi</h1>
           <h2>Frontend Developer and UX Designer</h2>
@@ -147,22 +151,20 @@ function Experience() {
           <span>Aug 2022 - Present</span>
         </div>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, nihil
-          fugiat. Illo explicabo numquam consequuntur cupiditate!
+          A versatile full-stack developer offering comprehensive web
+          development services, ranging from creating new websites to testing
+          and resolving issues in existing ones. In my most recent work:
         </p>
         <ul>
           <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
-            dolorum.
+            Despite not having prior experience with Angular, I utilized my
+            solid JavaScript experience to make the necessary changes.
           </li>
           <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
-            dolorum.
+            Successfully identified and resolved over 20 bugs, errors, and UX
+            related issues within the web application.
           </li>
-          <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
-            dolorum.
-          </li>
+          <li>I improved website performance and loading speed.</li>
         </ul>
       </article>
 
@@ -174,13 +176,13 @@ function Experience() {
           <span>Sept - Oct 2022</span>
         </div>
         <p>
-          Brainnest is a global consulting, outsourcing, project management,
-          research, and marketing.
+          Designing and developing user-facing interfaces for web applications.
+          Some of my responsibilities were:
         </p>
         <ul>
           <li>
-            Create user-friendly and responsive UI using HTML, CSS, and
-            JavaScript
+            Translating design mockups and wireframes into clean and efficient
+            HTML, CSS, and JavaScript code.
           </li>
           <li>
             Enhance the User Experience (UX) by optimizing website speed,
@@ -189,8 +191,8 @@ function Experience() {
             insights.
           </li>
           <li>
-            Participating in ideas storming, code reviews, and testing to ensure
-            high-quality code and maintainable applications.
+            Participating in code reviews and maintaining code quality and
+            consistency across projects.
           </li>
         </ul>
       </article>

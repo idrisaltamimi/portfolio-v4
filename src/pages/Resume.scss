@@ -1,6 +1,6 @@
 $paddingBlock: 0.25in;
 $paddingInline: 0.25in;
-// $paddingInline: 0.1in;
+// $paddingInline: 0in;
 $fs: 13px;
 
 .resume--section {
@@ -25,7 +25,7 @@ $fs: 13px;
 
   & > p {
     max-width: 80%;
-    margin-bottom: 1rem;
+    margin-block: 1rem;
   }
 
   hr {
@@ -68,7 +68,7 @@ $fs: 13px;
   h2 {
     font-size: calc(var(--fs-md) + 0.25rem);
     color: var(--gray);
-    font-weight: 500;
+    font-weight: 400;
   }
 
   h3 {
@@ -87,13 +87,13 @@ $rowPadding: calc(1.5rem / 2);
 .resume-row1 {
   padding-top: 1rem;
   padding-left: $rowPadding;
-  border-left: 1px solid var(--shadow);
   display: flex;
   flex-direction: column;
 }
 
 .resume-row2 {
   padding-right: $rowPadding;
+  border-right: 1px solid var(--shadow);
   & > p {
     margin-bottom: 1rem;
   }
@@ -136,7 +136,7 @@ $rowPadding: calc(1.5rem / 2);
 // resume skills
 .resume--skills {
   margin-top: 1rem;
-  padding-left: calc(var(--fs-sm) * 1.5);
+  padding-left: calc($fs * 1.5);
   list-style: circle;
   font-size: $fs;
   font-weight: 400;
@@ -184,11 +184,6 @@ $rowPadding: calc(1.5rem / 2);
         font-size: 16px;
       }
     }
-
-    ul,
-    p {
-      max-width: 82%;
-    }
   }
 
   p {
@@ -197,8 +192,12 @@ $rowPadding: calc(1.5rem / 2);
 
   ul {
     font-size: 16px;
-    padding-left: var(--fs-base);
+    padding-left: calc(16px * 1.5);
     color: var(--gray);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.6125rem;
     li {
       line-height: 26px;
     }
