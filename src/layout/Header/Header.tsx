@@ -24,10 +24,10 @@ export default function Header({ resume = false }: HeaderProps) {
       <button
         data-toggle-navbar={toggleNavbar}
         className="burger-logo"
-        aria-label="burger icon button"
+        aria-label="Burger logo to open navigation menu for mobile"
         onClick={() => setToggleNavbar((prev) => !prev)}
       >
-        <div aria-label="burger icon" />
+        <div />
       </button>
       <nav data-toggle-navbar={toggleNavbar}>
         <ul>
