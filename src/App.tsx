@@ -1,9 +1,7 @@
-import { lazy } from "react"
 import { Route, Routes } from "react-router-dom"
 
 import { ErrorBoundary } from "./components"
-import { Main } from "./pages"
-const Resume = lazy(() => import("./pages/Resume"))
+import { Main, Resume } from "./pages"
 import "./_customClasses.scss"
 
 function App() {
