@@ -35,7 +35,12 @@ $fs: 13px;
 
 .resume--rows-container {
   display: flex;
+  flex-direction: column-reverse;
   align-items: flex-start;
+
+  @media (min-width: 500px) {
+    flex-direction: row;
+  }
 }
 
 .resume--section-wrapper {
@@ -63,6 +68,10 @@ $fs: 13px;
     white-space: pre-line;
     font-size: calc(var(--fs-lg) + 1rem);
     color: var(--black);
+
+    @media (min-width: 500px) {
+      white-space: initial;
+    }
   }
 
   h2 {
@@ -142,12 +151,14 @@ $rowPadding: calc(1.5rem / 2);
   font-weight: 400;
   color: var(--gray);
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   gap: 1rem;
 
-  span {
-    display: block;
+  @media (min-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 

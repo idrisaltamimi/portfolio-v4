@@ -1,16 +1,20 @@
+import { lazy, Suspense } from "react"
 import { Route, Routes } from "react-router-dom"
 
 import { ErrorBoundary } from "./components"
-import { Main, Resume } from "./pages"
+const Resume = lazy(() => import("./pages/Resume"))
+const Main = lazy(() => import("./pages/Main"))
 import "./_customClasses.scss"
 
 function App() {
   return (
     <ErrorBoundary fallback="">
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/resume" element={<Resume />} />
-      </Routes>
+      <Suspense>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
+      </Suspense>
     </ErrorBoundary>
   )
 }

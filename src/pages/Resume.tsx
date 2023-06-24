@@ -24,7 +24,7 @@ export default function Resume() {
               <FaFileDownload /> <span>Download</span>
             </a>
           </aside>
-          <h1>Idris AlTamimi</h1>
+          <h1>Idris {"\n"} AlTamimi</h1>
           <h2>Frontend Developer and UX Designer</h2>
           <p>
             Web Developer valued for creating engaging, high-performance, and

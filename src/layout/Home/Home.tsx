@@ -1,60 +1,58 @@
-import { Section } from "../../components"
-import hero from "../../assets/hero.svg"
 import { VscArrowRight } from "react-icons/vsc"
+
+import { Section } from "../../components"
+import HeroImage from "./HeroImage"
 import "./Home.scss"
 
 export default function Home() {
   return (
-    <>
-      <Section className="home" id="home">
-        <div className="section--wrapper home--wrapper">
-          <div className="home--desc">
-            <span className="home--overline">Hi I'm Idris,</span>
-            <div className="colorful hero--title-wrapper">
-              <h1>Frontend Developer,</h1>
-              {pattern2Svg}
-            </div>
-            <h2>
-              Bringing digital experiences to life,
-              <br /> one line of code at a time
-            </h2>
+    <Section className="home" id="home">
+      <div className="section--wrapper home--wrapper">
+        <div className="home--desc">
+          <span className="home--overline">Hi I'm Idris,</span>
+          <div className="colorful hero--title-wrapper">
+            <h1>Frontend Developer,</h1>
+            {pattern2Svg}
+          </div>
+          <h2>
+            Bringing digital experiences to life,
+            <br /> one line of code at a time
+          </h2>
 
+          <a
+            href="#portfolio"
+            aria-label="navigate to Portfolio"
+            className="button hero--action-btn"
+          >
+            My projects <VscArrowRight />
+          </a>
+
+          <div className="hero--about">
+            <p>
+              Passionate About Crafting Intuitive and Interactive Web Interfaces
+            </p>
+            <p>
+              Creating visually stunning and performant web interfaces to
+              elevate your brand
+            </p>
             <a
               href="#portfolio"
-              aria-label="navigate to Portfolio"
-              className="button hero--action-btn"
-            >
-              My projects <VscArrowRight />
-            </a>
-
-            <div className="hero--about">
-              <p>
-                Passionate About Crafting Intuitive and Interactive Web
-                Interfaces
-              </p>
-              <p>
-                Creating visually stunning and performant web interfaces to
-                elevate your brand
-              </p>
-              <a
-                href="#portfolio"
-                aria-label="navigate to the next section"
-                className="scroll-btn"
-              />
-            </div>
-          </div>
-
-          <div className="hero--img-wrapper">
-            <img src={hero} width={800} height={800} alt="" />
+              aria-label="navigate to the next section"
+              className="scroll-btn"
+            />
           </div>
         </div>
-        <div className="home--overlay-text">
-          Frontend <br /> Developer
+
+        <div className="hero--img-wrapper">
+          <HeroImage />
         </div>
-        {pattern1Svg}
-        {pattern3Svg}
-      </Section>
-    </>
+      </div>
+      <div className="home--overlay-text">
+        Frontend <br /> Developer
+      </div>
+      {pattern1Svg}
+      {pattern3Svg}
+    </Section>
   )
 }
 
