@@ -22,7 +22,11 @@ header {
 
       display: flex;
       align-items: center;
-      gap: 3em;
+      gap: 2em;
+
+      @media (min-width: $navSwitch) {
+        gap: 3em;
+      }
 
       li:hover a,
       li:focus-visible a {
