@@ -1,20 +1,19 @@
-import { Helmet } from "react-helmet"
 import { FaFileDownload, FaGithubAlt } from "react-icons/fa"
 import { FiLinkedin } from "react-icons/fi"
 import { SiGmail } from "react-icons/si"
 
+import { useHelmet } from "../hooks"
 import { Header } from "../layout"
 import { resume } from "../assets"
 import "./Resume.scss"
 
 export default function Resume() {
+  useHelmet("Idris AlTamimi | Resume")
+
   return (
     <>
       <Header resume />
       <main className="resume--section">
-        <Helmet>
-          <title>Idris AlTamimi | Resume</title>
-        </Helmet>
         <section className="resume--section-wrapper">
           <aside>
             <a
