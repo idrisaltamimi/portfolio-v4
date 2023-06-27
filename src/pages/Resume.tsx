@@ -25,10 +25,10 @@ export default function Resume() {
             </a>
           </aside>
           <h1>Idris {"\n"} AlTamimi</h1>
-          <h2>Frontend Developer and UX Designer</h2>
+          <h2>Frontend Developer and UX Engineer</h2>
           <p>
-            Web Developer valued for creating engaging, high-performance, and
-            accessible web experiences.
+            I'm a Frontend Developer, valued for creating engaging,
+            high-performance, and accessible web experiences.
           </p>
           <hr />
 
