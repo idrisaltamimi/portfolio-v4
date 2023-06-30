@@ -1,0 +1,79 @@
+.pages-suspense-container {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg2);
+  display: grid;
+  grid-template-rows: 1fr 60px;
+  place-items: center;
+  text-align: center;
+
+  & > div {
+    position: relative;
+  }
+
+  h1 {
+    color: var(--black);
+    // &:first-child {
+    //   pointer-events: none;
+    //   transform: translateY(50%);
+    //   color: transparent;
+    //   -webkit-text-stroke: 1px var(--gray);
+    //   text-stroke: 1px var(--gray);
+    //   overflow: hidden;
+    // }
+    // &:last-child {
+    //   transform: translateY(-50%);
+    //   -webkit-background-clip: text;
+    //   -webkit-text-fill-color: transparent;
+    //   background-clip: text;
+    //   background-image: linear-gradient(var(--accent), var(--accent));
+    //   background-position: 0 100%;
+    //   background-repeat: repeat-y;
+    //   background-size: 0 0;
+
+    //   animation: underline 5s ease-out forwards;
+    // }
+
+    span {
+      font-weight: 400;
+      text-transform: capitalize;
+    }
+  }
+
+  .pages-suspense-loading {
+    position: relative;
+    margin-top: 1rem;
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    color: var(--gray);
+    text-transform: lowercase;
+
+    &::after {
+      position: absolute;
+      left: 100%;
+      content: ".";
+      animation: loading 2s infinite steps(4);
+    }
+  }
+}
+
+@keyframes underline {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes loading {
+  0% {
+    content: ".";
+  }
+  33% {
+    content: "..";
+  }
+  66% {
+    content: "...";
+  }
+  100% {
+    content: ".";
+  }
+}
