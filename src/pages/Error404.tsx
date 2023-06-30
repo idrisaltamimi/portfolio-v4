@@ -15,7 +15,7 @@ export default function Error404() {
         </h1>
         <p>
           Return back to{" "}
-          <Link to={"/"} className="button">
+          <Link to={"/"} className="button" aria-label="navigate to homepage">
             Homepage
           </Link>
         </p>

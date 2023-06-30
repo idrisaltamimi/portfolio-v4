@@ -1,5 +1,5 @@
-import { lazy, Suspense } from "react"
-import { Route, Routes } from "react-router-dom"
+import { lazy, Suspense, useEffect } from "react"
+import { Route, Routes, useNavigate } from "react-router-dom"
 
 import { ErrorBoundary, PagesSuspense } from "./components"
 import { Error404 } from "./pages"
@@ -28,7 +28,8 @@ function App() {
               </Suspense>
             }
           />
-          <Route path="/*" element={<Error404 />} />
+          <Route path="/404" element={<Error404 />} />
+          <Route path="/*" element={<Redirect />} />
         </Routes>
       </Suspense>
     </ErrorBoundary>
@@ -36,3 +37,14 @@ function App() {
 }
 
 export default App
+
+function Redirect() {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    navigate("/404")
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  return null
+}
