@@ -21,7 +21,7 @@ export default function Home() {
 
           <a
             href="#portfolio"
-            aria-label="navigate to Portfolio"
+            aria-label="navigate to My Project and Portfolio section"
             className="button hero--action-btn"
           >
             My projects <VscArrowRight />
