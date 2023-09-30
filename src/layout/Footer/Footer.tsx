@@ -39,7 +39,7 @@ export default function Footer() {
             href="https://www.freepik.com/free-vector/flat-creativity-concept-illustration_14620625.htm#query=illustrations&position=10&from_view=keyword&track=sph#position=10&query=illustrations"
             target="_blank"
             rel="noreferrer"
-            aria-label="Hero Image Link"
+            aria-label="Hero Image Link reference for pikisuperstar copyrights"
           >
             pikisuperstar <FaExternalLinkAlt />
           </a>
