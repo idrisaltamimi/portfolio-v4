@@ -1,4 +1,4 @@
-import { FaNodeJs, FaNpm, FaReact } from "react-icons/fa"
+import { FaAngular, FaNodeJs, FaNpm, FaReact } from "react-icons/fa"
 import { TbBrandNextjs } from "react-icons/tb"
 import {
   SiTypescript,
@@ -32,8 +32,11 @@ import {
   kanbanSmall,
   portfolioSmall,
   lazyImageSmall,
-  twitterSmall
+  twitterSmall,
   // dalleSmall
+  gamingQZ,
+  gamingQZSmall,
+  gamingQZIcon
 } from "../../assets"
 import "./Portfolio.scss"
 
@@ -47,23 +50,6 @@ export default function Portfolio() {
         </span>
 
         <PortfolioSubSection>
-          <PortfolioCard
-            name="GPT-OMNI"
-            image={gptOmni}
-            placeholderImage={gptOmniSmall}
-            logo={gptOmniIcon}
-            center
-            techStack={[
-              <FaReact />,
-              <SiTypescript />,
-              <SiTailwindcss />,
-              <FaNodeJs />,
-              <SiOpenai />
-            ]}
-            description="The application utilizes openAI API to provide a chatbot, a regex code generator, a random data generator and API mocking tool, and a recipe generator."
-            githubUrl="https://github.com/idrisaltamimi/gpt-omni.git"
-            webUrl="https://gpt-omni.netlify.app/"
-          />
           <PortfolioCard
             name="Kanban"
             image={kanban}
@@ -81,6 +67,41 @@ export default function Portfolio() {
             githubUrl="https://github.com/idrisaltamimi/task-manager.git"
             webUrl="https://dreamy-dasik-96dfe4.netlify.app"
           />
+
+          <PortfolioCard
+            name="GamingQZ"
+            image={gamingQZ}
+            placeholderImage={gamingQZSmall}
+            logo={gamingQZIcon}
+            techStack={[
+              <FaAngular />,
+              <SiTypescript />,
+              <SiSass />,
+              <FaNodeJs />,
+              <SiExpress />
+            ]}
+            description="Dashboard app for students that combines fun and learning"
+            webUrl="https://gamingqz.com/#/home"
+          />
+
+          <PortfolioCard
+            name="GPT-OMNI"
+            image={gptOmni}
+            placeholderImage={gptOmniSmall}
+            logo={gptOmniIcon}
+            center
+            techStack={[
+              <FaReact />,
+              <SiTypescript />,
+              <SiTailwindcss />,
+              <FaNodeJs />,
+              <SiOpenai />
+            ]}
+            description="The application utilizes openAI API to provide a chatbot, a regex code generator, a random data generator and API mocking tool, and a recipe generator."
+            githubUrl="https://github.com/idrisaltamimi/gpt-omni.git"
+            webUrl="https://gpt-omni.netlify.app/"
+          />
+
           <PortfolioCard
             name="Personal Website"
             image={portfolio}

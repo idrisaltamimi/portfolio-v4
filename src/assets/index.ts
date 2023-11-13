@@ -1,4 +1,5 @@
 // big images
+import gamingQZ from "./portfolioImages/gamingqz.png"
 import gptOmni from "./portfolioImages/gpt-omni.png"
 import kanban from "./portfolioImages/kanban.png"
 import twitter from "./portfolioImages/twitter.png"
@@ -7,6 +8,7 @@ import portfolio from "./portfolioImages/portfolio.png"
 import lazyImage from "./portfolioImages/lazy-load-img.png"
 
 // placeholder images
+import gamingQZSmall from "./portfolioImagesPlaceholder/gamingqz.png"
 import gptOmniSmall from "./portfolioImagesPlaceholder/gpt-omni.png"
 import kanbanSmall from "./portfolioImagesPlaceholder/kanban.png"
 import twitterSmall from "./portfolioImagesPlaceholder/twitter.png"
@@ -15,6 +17,7 @@ import portfolioSmall from "./portfolioImagesPlaceholder/portfolio.png"
 import lazyImageSmall from "./portfolioImagesPlaceholder/lazy-load-img.png"
 
 // logos
+import gamingQZIcon from "./portfolioImages/gamingqz-icon.svg"
 import gptOmniIcon from "./portfolioImages/gpt-omni-icon.svg"
 import kanbanIcon from "./portfolioImages/kanban-icon.svg"
 import twitterIcon from "./portfolioImages/twitter-icon.svg"
@@ -42,5 +45,8 @@ export {
   dalleSmall,
   portfolioSmall,
   lazyImageSmall,
-  resume
+  resume,
+  gamingQZ,
+  gamingQZSmall,
+  gamingQZIcon
 }

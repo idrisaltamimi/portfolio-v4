@@ -16,7 +16,7 @@ type PortfolioCardProps = {
   hidden?: boolean
   center?: boolean
   description: string
-  githubUrl: string
+  githubUrl?: string
   webUrl: string
 }
 
@@ -91,15 +91,17 @@ export default function PortfolioCard({
             >
               View Project <FaExternalLinkAlt />
             </a>
-            <a
-              href={githubUrl}
-              className="flipped-github"
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`${name} github link`}
-            >
-              GitHub <FaGithubAlt />
-            </a>
+            {githubUrl && (
+              <a
+                href={githubUrl}
+                className="flipped-github"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`${name} github link`}
+              >
+                GitHub <FaGithubAlt />
+              </a>
+            )}
           </div>
         </div>
       </li>
