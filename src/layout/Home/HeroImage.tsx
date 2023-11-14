@@ -2,7 +2,16 @@ import "./HeroImage.scss"
 import hero from "../../assets/hero.svg"
 
 export default function HeroImage() {
-  return <img src={hero} alt="" loading="lazy" width="800" height="800" />
+  return (
+    <img
+      className="hero-image-svg"
+      src={hero}
+      alt=""
+      loading="lazy"
+      width="800"
+      height="800"
+    />
+  )
 }
 
 // <svg

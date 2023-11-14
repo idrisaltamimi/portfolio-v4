@@ -81,7 +81,7 @@ export default function Portfolio() {
               <SiExpress />
             ]}
             description="Dashboard app for students that combines fun and learning"
-            webUrl="https://gamingqz.com/#/home"
+            webUrl="https://gamingqz.com"
           />
 
           <PortfolioCard
