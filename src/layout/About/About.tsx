@@ -26,7 +26,7 @@ export default function About() {
           <div className="about--me">
             <h3>Who I'm,</h3>
             <p className="about--info">
-              I am a Frontend Developer with two years of experience. During
+              I am a Fullstack Developer with two years of experience. During
               this time, I've helped startups launch, grow, and improve their
               websites by assisting them in creating new web applications,
               testing, fixing, and elevating web applications' functionality,

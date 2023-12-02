@@ -11,7 +11,7 @@ export default function Home() {
         <div className="home--desc">
           <span className="home--overline">Hi I'm Idris,</span>
           <div className="colorful hero--title-wrapper">
-            <h1>Frontend Developer,</h1>
+            <h1>Fullstack Developer,</h1>
             {pattern2Svg}
           </div>
           <h2>
@@ -48,7 +48,7 @@ export default function Home() {
         </div>
       </div>
       <div className="home--overlay-text">
-        Frontend <br /> Developer
+        Fullstack <br /> Developer
       </div>
       {pattern1Svg}
       {pattern3Svg}
